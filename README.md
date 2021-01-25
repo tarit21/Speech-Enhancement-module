@@ -1,9 +1,5 @@
 # Source Separation
 
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAppleholic%2Fsource_separation)](https://hits.seeyoufarm.com)
-[![Synthesis Example On Colab Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Appleholic/source_separation/blob/master/assets/Source_Separation_first_notebook.ipynb)
----
-
 
 ## Introduction
 
