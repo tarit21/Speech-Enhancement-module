@@ -205,11 +205,11 @@ It is tuned to find out good validation WSDR loss
 
 #### Train
 
-![Train L1 Loss curve](./assets/train_curve_wsdr.png)
+![Train L1 Loss curve](train_curve_wsdr.png)
 
 #### Valid
 
-![Valid L1 Loss curve](./assets/valid_curve_wsdr.png)
+![Valid L1 Loss curve](valid_curve_wsdr.png)
 
 
 ## License
