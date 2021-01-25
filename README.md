@@ -27,7 +27,7 @@ The environmental noises were gathered from [ESC-50 dataset](https://github.com/
  For this project, I focused on 10 classes of environmental noise: **tic clock**, **foot steps**, **bells**, **handsaw**, **alarm**, **fireworks**, **insects**, **brushing teeth**, **vaccum cleaner** and **snoring**. These classes are illustrated in the image below
  (I created this image using pictures from [https://unsplash.com](https://unsplash.com)).
 
-<img src="img/classes_noise.png" alt="classes of environmental noise used" title="classes of environmental noise" />
+<img src="classes_noise.png" alt="classes of environmental noise used" title="classes of environmental noise" />
 
 To create the datasets for training/validation/testing, audios were sampled at 8kHz and I extracted windows
 slighly above 1 second. I performed some data augmentation for the environmental noises (taking the windows at different times creates different noise windows). Noises have been blended to clean voices  with a randomization of the noise level (between 20% and 80%). At the end, training data consisted of 10h of noisy voice & clean voice,
