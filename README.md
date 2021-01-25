@@ -156,12 +156,6 @@ Below some examples:
 [Predicted output example test 2](denoise_t1.wav)
 
 
-# Source Separation
-
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAppleholic%2Fsource_separation)](https://hits.seeyoufarm.com)
-[![Synthesis Example On Colab Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Appleholic/source_separation/blob/master/assets/Source_Separation_first_notebook.ipynb)
----
-
 
 ## Introduction
 
@@ -179,29 +173,20 @@ And then, To more stable inferences in real cases, below things are adopted.
 
 - Audioset data is used to augment noises.
 
-Dataset source is opened on [audioset_augmentor](https://github.com/AppleHolic/audioset_augmentor).
-See this [link](https://research.google.com/audioset/download.html) for finding explanations about audioset.
+Dataset source is opened on [audioset_augmentor](https://github.com/tarit21/Speech-Enhancement-module).
 This repo used *Balanced train label dataset* (Label balanced, non-human classes, 18055 samples)
 
 - Preemphasis is used to remove high-frequency noises on adapting real samples.
-
-It's not official implementation by authors of paper.
 
 
 #### Singing Voice Separation
 
 Singing Voice Separation with [DSD100](https://sigsep.github.io/datasets/dsd100.html) dataset!*
 This model is trained with larger model and higher sample rate (44.1k). So it gives more stable and high quality audio.
-Let's checkout [Youtube Playlist](https://www.youtube.com/playlist?list=PLQ4ukFz6Ieir5bZYOns08_2gMjt4hYP4I) with samples of my favorites!
-
-#### Recent Updates
-
-- Add Synthesis Colab Notebook Example. You can check out this on the badge or [here](https://colab.research.google.com/github/Appleholic/source_separation/blob/master/assets/Source_Separation_first_notebook.ipynb).
-
 
 ### Dataset
 
-You can use pre-defined preprocessing and dataset sources on https://github.com/Appleholic/pytorch_sound
+You can use pre-defined preprocessing and dataset sources on https://github.com/tarit21/Speech-Enhancement-module
 
 
 ## Environment
@@ -219,44 +204,15 @@ There are three external repositories on this repository.
 
 - pytorch_sound package
 
-It is built with using [pytorch_sound](https://github.com/AppleHolic/pytorch_sound).
+It is built with using [pytorch_sound](https://github.com/tarit21/Speech-Enhancement-module).
 So that, *pytorch_sound* is a modeling toolkit that allows engineers to train custom models for sound related tasks.
 Many of sources in this repository are based on pytorch_sound template.
 
 - audioset_augmentor
 
-Explained it on above section. [link](https://github.com/AppleHolic/audioset_augmentor)
-
-- pypesq : [git+https://github.com/ludlows/python-pesq](git+https://github.com/ludlows/python-pesq)
+Explained it on above section. [link](https://github.com/tarit21/Speech-Enhancement-module)
 
 For evaluation, PESQ python wrapper repository is added.
-
-
-
-## Pretrained Checkpoint
-
-- General Voice Source Separation
-  - Model Name : refine_unet_base (see settings.py)
-  - Link : [Google Drive](https://drive.google.com/open?id=1JRK-0RVV2o7cyRdvFuwe5iw84ESvfcyR)
-
-- Singing Voice Separation
-  - Model Name : refine_unet_larger
-  - Link : [Google Drive](https://drive.google.com/open?id=1ywgFZ7ms7CmiCCv2MikrKx9g-2j9kd-I)
-
-- Current Tag : v0.1.1
-
-## Predicted Samples
-
-- *General Voice Source Separation*
-  - Validation 10 random samples
-    - Link : [Google Drive](https://drive.google.com/open?id=1CafFnqWn_QvVPu2feNLn6pnjRYIa_rbP)
-
-  - Test Samples :
-    - Link : [Google Drive](https://drive.google.com/open?id=19Sn6pe5-BtWXYa6OiLbYGH7iCU-mzB8j)
-
-- *Singing Voice Seperation*
-  - Check out my youtube playlist !
-    - Link : [Youtube Playlist](https://www.youtube.com/playlist?list=PLQ4ukFz6Ieir5bZYOns08_2gMjt4hYP4I)
 
 
 ## Installation
@@ -266,9 +222,8 @@ For evaluation, PESQ python wrapper repository is added.
 > You should see first README.md of audioset_augmentor and pytorch_sound, to prepare dataset and to train separation models.
 
 ```
-$ pip install git+https://github.com/Appleholic/audioset_augmentor
-$ pip install git+https://github.com/Appleholic/pytorch_sound@v0.0.3
-$ pip install git+https://github.com/ludlows/python-pesq  # for evaluation code
+$ pip install git+https://github.com/tarit21/audioset_augmentor
+$ pip install git+https://github.com/tarit21/pytorch_sound@v0.0.3
 ```
 
 - Install package
@@ -367,11 +322,11 @@ It is tuned to find out good validation WSDR loss
 
 #### Train
 
-![Train L1 Loss curve](./assets/train_curve_wsdr.png)
+![Train L1 Loss curve](train_curve_wsdr.png)
 
 #### Valid
 
-![Valid L1 Loss curve](./assets/valid_curve_wsdr.png)
+![Valid L1 Loss curve](valid_curve_wsdr.png)
 
 
 ## License
